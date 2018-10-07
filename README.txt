@@ -4,7 +4,7 @@ INSTALLATION INSTRUCTIONS:
    and run 'npm install' to install all dependencies.
 
 STARTUP INSTRUCTIONS:
-To start the server, run 'node server.js'.  This will create a server on the
+To start the server, run 'node server.js' in directory containing 'server.js' file.  This will create a server on the
 localhost (3000) port.
 
 TESTING INSTRUCTIONS:
