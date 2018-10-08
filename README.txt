@@ -9,6 +9,7 @@ localhost (3000) port.
 
 TESTING INSTRUCTIONS:
 To test, I used Postman to send HTTP requests to the server.
+When assigning/unassigning medicine, ID's are used as 'keys', not names.
 
 1) To add a patient: POST 'localhost:3000/patient?name=<name>&id=<id>'
    Replace <name> with string of patient name.
