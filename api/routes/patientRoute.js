@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 
-// Get list of patients
+// Get list of patients.
 router.get('/', (req, res, next) => {
     try {
         let listOfPats = model.getPatients();
@@ -16,12 +16,12 @@ router.get('/', (req, res, next) => {
     }
 })
 
-// Add a patient
+// Add a patient.
 // Params: 'name', 'id'
 router.post('/', (req, res, next) => {
     try {
-        let patientName = req.param('name');
-        let patientID = req.param('id');
+        let patientName = req.query.name;
+        let patientID = req.query.id;
         model.addPatient(patientName, patientID);
         res.status(200).json({
             message: "Patient successfully added.",
@@ -34,12 +34,12 @@ router.post('/', (req, res, next) => {
     }
 })
 
-// Assign medicine to patient
+// Assign medicine to patient.
 // Params: 'patID', 'medID'
 router.put('/', (req, res, next) => {
     try {
-        let patientID = req.param('patID');
-        let medID = req.param('medID');
+        let patientID = req.query.patID;
+        let medID = req.query.medID;
         model.assignMedToPatient(patientID, medID)
         res.status(200).json({
           message: 'Medication successfully assigned.'
@@ -51,12 +51,12 @@ router.put('/', (req, res, next) => {
     }
 })
 
-// Delete medicine from patient
+// Unassign medicine from patient.
 // Params: 'patID', 'medID'
 router.delete('/', (req, res, next) => {
     try {
-        let patientID = req.param('patID');
-        let medID = req.param('medID');
+        let patientID = req.query.patID;
+        let medID = req.query.medID;
         model.removeMedFromPatient(patientID, medID)
         res.status(200).json({
           message: 'Medication successfully unassigned.'

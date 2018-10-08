@@ -1,12 +1,12 @@
 const express = require('express');
 const router = express.Router();
 
-// Add medicine to available medicines\
+// Add medicine to available medication.
 // Params: 'name', 'id'
 router.post('/', (req, res, next) => {
     try {
-        let medName = req.param('name');
-        let medID = req.param('id');
+        let medName = req.query.name;
+        let medID = req.query.id;
         model.addMedication(medName, medID);
         res.status(200).json({
             message: "Medication successfully added.",
@@ -21,7 +21,7 @@ router.post('/', (req, res, next) => {
     
 });
 
-// Get list of available medicines
+// Get list of available medication.
 router.get('/', (req, res, next) => {
     try {
         let listOfMeds = model.getMeds();
