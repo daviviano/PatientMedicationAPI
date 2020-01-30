@@ -1,17 +1,17 @@
-INSTALLATION INSTRUCTIONS:
+# INSTALLATION INSTRUCTIONS:
 1) Ensure NodeJS is installed on local machine. 
 2) Navigate to directory containing source files and 'package.json' files
    and run 'npm install' to install all dependencies.
    
-TECHNOLOGIES:
+# TECHNOLOGIES:
 JavaScript, NodeJS, ExpressJS
 Programmed in Visual Studio Code IDE
 
-STARTUP INSTRUCTIONS:
+# STARTUP INSTRUCTIONS:
 To start the server, run 'node server.js' in directory containing 'server.js' file.  This will create a server on the
 localhost (3000) port.
 
-TESTING INSTRUCTIONS:
+# TESTING INSTRUCTIONS:
 To test, I used Postman to send HTTP requests to the server.
 When assigning/unassigning medicine, ID's are used as 'keys', not names.
 
